@@ -15,6 +15,10 @@ type Channel {
 type Query {
   channels: [Channel]    # "[]" means this is a list of channels
 }
+
+type Mutation {
+  addChannel(name: String!): Channel
+}
 `;
 
 const schema = makeExecutableSchema({ typeDefs, resolvers });
